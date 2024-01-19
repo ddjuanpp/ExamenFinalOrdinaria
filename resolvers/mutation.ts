@@ -58,7 +58,7 @@ export const Mutation = {
             const datetime = json3.datetime;
 
             //Crear el contacto
-            const newContact = new ContactModel({name, number: numberNew, country, datetime, capital});
+            const newContact = new ContactModel({name, number: numberNew, country, datetime});
             await newContact.save();
 
             return newContact;
@@ -114,7 +114,7 @@ export const Mutation = {
                 if(name){
                     const contactUpdate = await ContactModel.findByIdAndUpdate(
                         {_id: args.id},
-                        {name, number: numberNew, country, datetime, capital},
+                        {name, number: numberNew, country, datetime},
                         {new: true}
                     ).exec();
                     if(!contactUpdate){
