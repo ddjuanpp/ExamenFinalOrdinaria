@@ -9,7 +9,6 @@ const contactSchema = new Schema(
         number: {type: String, required: true},
         country: {type: String, required: true},
         datetime: {type: String, required: true},
-        capital: {type: String, required: true},
     },
     { timestamps: true }
 );

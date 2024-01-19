@@ -4,5 +4,4 @@ export type Contact = {
     number: string,
     country: string,
     datetime: string,
-    capital: string,
 }
